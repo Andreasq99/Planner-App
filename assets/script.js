@@ -86,9 +86,10 @@ $(function () {
   // current hour in 24-hour time?
 
   var hourOfDay = dayjs().format("HH");
-  console.log(hourOfDay);
+  console.log("Time: "+hourOfDay);
   for(i=0; i<hourArr.length;i++){
     var j = i+9;
+    console.log(j);
     if(j<hourOfDay){
       console.log("Past");
       hourArr[i].addClass("past");
@@ -99,7 +100,6 @@ $(function () {
       console.log("Future");
       hourArr[i].addClass("future");
     }
-    console.log(j);
   }
 
   //
@@ -111,7 +111,6 @@ $(function () {
   for(i=0;i<hourArr.length;i++){
     var j = i+9;
     var identity = "#hour-"+j;
-    console.log(identity);
     $(identity).children("textarea").val(txtArr[i]);
   }
 
